@@ -10,14 +10,18 @@ Ek complete decentralized voting platform jo Ethereum blockchain par built hai. 
 - **Smart Contracts**: Solidity me likhe gaye secure contracts
 - **Frontend**: Beautiful web interface with Web3 integration
 - **Token System**: ERC20 STK tokens for governance
+- **Reputation System**: Advanced user reputation tracking with achievements
 
 ## ✨ Features
 
 ### 🔗 Blockchain Features:
 - **SimpleToken (STK)**: ERC20 token with minting functionality
-- **SimpleVoting**: Decentralized voting contract
+- **SimpleVoting**: Decentralized voting contract with reputation integration
+- **ReputationSystem**: Advanced reputation tracking with achievements and badges
+- **Weighted Voting**: Vote weight based on user reputation
+- **Achievement System**: NFT-like badges for user milestones
 - **Owner Controls**: Proposal creation aur token minting
-- **Security**: Double voting prevention
+- **Security**: Double voting prevention, reentrancy protection
 
 ### 🎨 Frontend Features:
 - **Modern UI**: Gradient design with animations
@@ -64,18 +68,19 @@ npm run frontend  # Start web server
 
 ```
 Vote_Chain/
-├── contracts/           # Smart contracts
-│   ├── SimpleToken.sol     # ERC20 token
-│   └── SimpleVoting.sol    # Voting logic
-├── frontend/            # Web interface
-│   ├── index.html         # Main page
-│   ├── style.css          # Styling
-│   ├── app.js            # Web3 logic
-│   └── server.js         # HTTP server
+├── contracts/              # Smart contracts
+│   ├── SimpleToken.sol        # ERC20 token
+│   ├── SimpleVoting.sol       # Voting logic with reputation
+│   └── ReputationSystem.sol   # Advanced reputation tracking
+├── frontend/               # Web interface
+│   ├── index.html            # Main page
+│   ├── style.css             # Styling
+│   ├── app.js               # Web3 logic
+│   └── server.js            # HTTP server
 ├── scripts/
-│   └── deploy.js         # Deployment script
+│   └── deploy.js            # Deployment script
 └── test/
-    └── test.js           # Contract tests
+    └── test.js              # Contract tests
 ```
 
 ## 🎮 How to Use
@@ -94,8 +99,9 @@ Vote_Chain/
 
 ### Smart Contracts:
 - **SimpleToken**: 1M initial supply, owner can mint more
-- **SimpleVoting**: Proposal creation, voting, vote tracking
-- **Security**: Ownable pattern, reentrancy protection
+- **SimpleVoting**: Proposal creation, voting, reputation-weighted votes
+- **ReputationSystem**: Dynamic scoring, achievements, voting weight calculation
+- **Security**: Ownable pattern, reentrancy protection, decay mechanisms
 
 ### Frontend Tech:
 - **Web3**: Ethers.js for blockchain interaction
